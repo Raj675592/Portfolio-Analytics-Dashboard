@@ -24,7 +24,11 @@ const AssetAllocation = ({ allocation, tickers }) => {
         </div>
       );
     }
-    return null;
+
+
+
+
+    return null ;
   };
 
   const renderCustomLabel = ({ cx, cy, midAngle, innerRadius, outerRadius, percent }) => {
