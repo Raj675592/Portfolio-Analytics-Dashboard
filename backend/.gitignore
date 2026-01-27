@@ -1,6 +1,0 @@
-/venv
-
-# Ignore node_modules and venv in backend
-node_modules/
-venv/
-# dependencies
