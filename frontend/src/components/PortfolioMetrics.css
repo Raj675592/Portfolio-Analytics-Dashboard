@@ -1,0 +1,215 @@
+.portfolio-metrics {
+  width: 100%;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.metric-card {
+  background: var(--secondary-bg);
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+  border-radius: 2px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.metric-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: var(--accent-color);
+}
+
+.metric-card.positive::before {
+  background: var(--success-color);
+}
+
+.metric-card.negative::before {
+  background: var(--error-color);
+}
+
+.metric-card.neutral::before {
+  background: var(--accent-secondary);
+}
+
+.metric-icon {
+  font-size: 2.5rem;
+  opacity: 0.8;
+  min-width: 50px;
+  text-align: center;
+}
+
+.metric-card.accent .metric-icon {
+  color: var(--accent-color);
+}
+
+.metric-card.positive .metric-icon {
+  color: var(--success-color);
+}
+
+.metric-card.negative .metric-icon {
+  color: var(--error-color);
+}
+
+.metric-card.neutral .metric-icon {
+  color: var(--accent-secondary);
+}
+
+.metric-content {
+  flex: 1;
+}
+
+.metric-label {
+  font-size: 0.75rem;
+  color: var(--secondary-text);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.metric-value {
+  font-size: 1.8rem;
+  font-weight: 900;
+  color: var(--primary-text);
+  margin: 0.3rem 0;
+  font-family: 'Courier New', monospace;
+}
+
+.metric-card.positive .metric-value {
+  color: var(--success-color);
+}
+
+.metric-card.negative .metric-value {
+  color: var(--error-color);
+}
+
+.metric-subvalue {
+  font-size: 0.7rem;
+  color: var(--secondary-text);
+  opacity: 0.7;
+}
+
+.metric-decoration {
+  position: absolute;
+  right: -20px;
+  top: -20px;
+  width: 80px;
+  height: 80px;
+  background: radial-gradient(circle, rgba(0, 255, 136, 0.1), transparent);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.performance-summary {
+  background: var(--secondary-bg);
+  border: 1px solid var(--border-color);
+  padding: 1.5rem;
+  border-radius: 2px;
+  position: relative;
+}
+
+.performance-summary::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-color), transparent);
+}
+
+.performance-summary h4 {
+  font-size: 1rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent-color);
+  margin-bottom: 1.5rem;
+}
+
+.stocks-performance {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.stock-performance-item {
+  display: grid;
+  grid-template-columns: 80px 1fr 100px;
+  align-items: center;
+  gap: 1rem;
+}
+
+.stock-ticker {
+  font-size: 0.9rem;
+  font-weight: bold;
+  color: var(--primary-text);
+  letter-spacing: 1px;
+}
+
+.performance-bar-container {
+  background: rgba(48, 54, 61, 0.3);
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+}
+
+.performance-bar {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.performance-bar.positive {
+  background: linear-gradient(90deg, var(--success-color), rgba(0, 255, 136, 0.5));
+}
+
+.performance-bar.negative {
+  background: linear-gradient(90deg, var(--error-color), rgba(255, 71, 87, 0.5));
+}
+
+.stock-return {
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-align: right;
+  font-family: 'Courier New', monospace;
+}
+
+.stock-return.positive {
+  color: var(--success-color);
+}
+
+.stock-return.negative {
+  color: var(--error-color);
+}
+
+@media (max-width: 768px) {
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .metric-card {
+    padding: 1rem;
+  }
+
+  .metric-value {
+    font-size: 1.5rem;
+  }
+
+  .stock-performance-item {
+    grid-template-columns: 60px 1fr 80px;
+    gap: 0.5rem;
+  }
+}
