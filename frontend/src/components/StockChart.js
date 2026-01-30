@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { LineChart, Line, AreaChart, Area, CandlestickChart, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
+import { LineChart, Line, AreaChart, Area,  XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts';
 import { motion } from 'framer-motion';
 import './StockChart.css';
 
