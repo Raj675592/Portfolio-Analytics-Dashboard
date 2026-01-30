@@ -37,7 +37,3 @@
 
 ---
 
-**Summary for Resume:**
-- Developed a full-stack Portfolio Analytics Dashboard using React.js (frontend) and Python (backend).
-- Implemented RESTful APIs, data analytics, and interactive visualizations.
-- Leveraged modern libraries for scalable, user-friendly, and secure financial data analysis.
