@@ -8,7 +8,7 @@ import AssetAllocation from "./components/AssetAllocation";
 import PerformanceChart from "./components/PerformanceChart";
 import StockCard from "./components/StockCard";
 
-const API_BASE_URL = "http://localhost:5000/api";
+const API_BASE_URL = "https://portfolio-analytics-dashboard-3.onrender.com/api";
 
 function App() {
   const [portfolioData, setPortfolioData] = useState(null);
